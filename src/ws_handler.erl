@@ -12,7 +12,7 @@ init({tcp, http}, _Req, _Opts) ->
 
 % websocket handshake will not finish until the tcp is connected first
 websocket_init(_TransportName, Req, _Opts) ->
-    {ok, Sock} = gen_tcp:connect("chat.freenode.net", 6667, [binary, {packet, 0}, {active, true}]),
+    {ok, Sock} = gen_tcp:connect("chat.freenode.net", 6667, [binary, {packet, line}, {active, true}]),
     {ok, Req, Sock}.
 
 % WS -> TCP
