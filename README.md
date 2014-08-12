@@ -30,7 +30,7 @@ Then run:
 
 Or:
 
-    ERL_LIBS=$PWD:$PWD/deps erl -s ws_proxy_app
+    ERL_LIBS=$PWD:$PWD/deps erl -s ws_proxy_app -noshell
 
 
 An Erlang release
