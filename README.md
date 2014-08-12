@@ -22,3 +22,12 @@ HOW
     application:start(cowboy), application:start(ws_proxy).
 
 
+
+IRC commands
+============
+
+    NICK nickname
+    USER nickname 8 * :Firstname Surname
+    PONG :...
+    JOIN #chanellname
+    PRIVMSG #channelname :message
