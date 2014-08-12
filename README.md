@@ -18,12 +18,21 @@ Hardcoded:
 HOW
 ===
 
+Compile:
+
     rebar get-deps
     rebar compile
+
+
+Then run:
+
     rebar shell
     1> application:start(crypto), application:start(ranch), application:start(cowlib),
     application:start(cowboy), application:start(ws_proxy).
 
+Or:
+
+    ERL_LIBS=$PWD:$PWD/deps erl -s ws_proxy_app
 
 
 IRC commands
