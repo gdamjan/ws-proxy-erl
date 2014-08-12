@@ -9,8 +9,6 @@ Hardcoded:
  * line 15 in `ws_handler.erl` the host and port of `gen_tcp:connect`
  * line 6 in `webirc.js` in `function connect_ws` websocket ports (because I'd like to try this on openshift)
  * line 11 in `ws_proxy_app.erl` the http listen port (openshift uses different ports for http and websockets)
- * dir/file in `ws_proxy_app.erl` for cowboy_static depend on teh current dir beeing the project dir, should be moved to
-   priv_dir but that requires the use of Erlang releases
  * `/_irc` the websocket endpoint in both `webirc.js` and `ws_proxy_app.erl`
 
 
