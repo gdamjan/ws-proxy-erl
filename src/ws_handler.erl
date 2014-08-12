@@ -7,7 +7,9 @@
 -export([websocket_info/3]).
 -export([websocket_terminate/3]).
 
-init({tcp, http}, _Req, _Opts) ->
+init({tcp, http}, Req, _Opts) ->
+    {{IP, Port}, _} = cowboy_req:peer(Req),
+    io:format("[websocket connection from ~p:~b]~n", [IP, Port]),
     {upgrade, protocol, cowboy_websocket}.
 
 % websocket handshake will not finish until the tcp is connected first
