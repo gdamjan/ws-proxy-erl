@@ -1,0 +1,14 @@
+%% Feel free to use, reuse and abuse the code in this file.
+{application, ws_proxy, [
+    {description, "WebSocket to TCP Socket proxy"},
+        {vsn, "1"},
+        {modules, []},
+        {registered, [ws_proxy_sup]},
+        {applications, [
+            kernel,
+            stdlib,
+            cowboy
+        ]},
+        {mod, {ws_proxy_app, []}},
+        {env, []}
+]}.

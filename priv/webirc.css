@@ -1,0 +1,67 @@
+h1,h2,h3 { margin: 0 }
+html, body { margin: 0; padding: 0; height: 100%; width: 100%;}
+
+#container {
+   height: 100%;
+   width: 100%;
+}
+
+#bottom {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+}
+
+#input_line {
+   margin: 0;
+   width: 98%;
+   font-family: "DejaVu Sans Mono", Inconsolata, Consolas, monospace;
+}
+#output {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 82%;
+   padding: 4px 8px 2em 8px;
+   font-family: "DejaVu Sans Mono", Inconsolata, Consolas, monospace;
+   font-size: 80%;
+   white-space: pre-wrap;
+   line-height: 1em;
+}
+
+#sidebar {
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 16%;
+   bottom: 2em;
+   overflow: auto;
+   padding-left: 8px;
+   border-left: 1px solid #ddd;
+   font-family: sans-serif;
+   font-size: 70%;
+}
+#sidebar ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+#sidebar ul li {
+   cursor: pointer;
+   white-space: pre;
+}
+#sidebar .jspVerticalBar {
+   /* visibility: hidden;*/
+   opacity: 0.1;
+   width: 6px;
+}
+#sidebar:hover .jspVerticalBar {
+   /* visibility: visible;*/
+   opacity: 1;
+}
+#sidebar .jspDrag {
+    background-color: #1A3CB1;
+}
+#sidebar .jspTrack {
+    background-color: #ACBEFD;
+}
