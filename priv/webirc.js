@@ -12,7 +12,7 @@ jQuery(function ($) {
           ws_uri = 'ws:';
           ws_port = 8000;
       }
-      ws_uri += '//' + loc.hostname + ':' + ws_port + '/_irc';
+      ws_uri += '//' + loc.hostname + ':' + ws_port + '/_ws';
       return new WebSocket(ws_uri);
    }
 

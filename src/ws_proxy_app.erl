@@ -21,7 +21,7 @@ start(_Type, _Args) ->
     Priv = priv_dir(),
     Dispatch = cowboy_router:compile([
         {'_', [
-            {"/_irc",  ws_handler, []},
+            {"/_ws",  ws_handler, []},
             {"/",      cowboy_static, {file, Priv ++ "/index.html"}},
             {"/[...]", cowboy_static, {dir,  Priv}}
         ]}
