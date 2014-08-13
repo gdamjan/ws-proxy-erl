@@ -9,7 +9,7 @@
 
 init({tcp, http}, Req, _Opts) ->
     {{IP, Port}, _} = cowboy_req:peer(Req),
-    io:format("[websocket connection from ~p:~b]~n", [IP, Port]),
+    io:format("[new websocket connection from ~p:~b]~n", [IP, Port]),
     {upgrade, protocol, cowboy_websocket}.
 
 % websocket handshake will not finish until the tcp is connected first
@@ -35,6 +35,8 @@ websocket_info({tcp_closed, Socket}, Req, Socket) ->
 websocket_info(_Info, Req, Socket) ->
     {ok, Req, Socket}.
 
-websocket_terminate(_Reason, _Req, Socket) ->
+websocket_terminate(_Reason, Req, Socket) ->
+    {{IP, Port}, _} = cowboy_req:peer(Req),
+    io:format("[websocket connection from ~p:~b closed]~n", [IP, Port]),
     gen_tcp:close(Socket),
     ok.
